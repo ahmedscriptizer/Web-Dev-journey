@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav Bar Proect</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      .nav1 {
+        /* border: 2px solid red; */
+        background-color: #f8f9fa;
+        padding: 10px;
+      }
+      .nav1 ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav1 li {
+        display: inline;
+        /* its a good practice to use inline although without inline it will work */
+      }
+      .nav1 a {
+        text-decoration: none;
+        padding: 5px 15px;
+        color: black;
+        position: relative;
+      }
+      .nav1 .btn_1 {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav1 a::after {
+        content: "";
+        background-color: blue;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+      .nav2 {
+        background-color: #03643c;
+        border-radius: 10px;
+        width: 200px;
+        padding: 10px;
+      }
+      .nav2 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav2 li{
+        margin-bottom: 10px;
+       
+      }
+      .nav2 a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+      }
+      .nav2 .btn_2{
+        border: none;
+        background-color: #024f06;
+        color: white;
+        width: 100%;
+        padding: 7px;
+      }
+      .nav2 a:hover {
+        background-color: #0a4d2e;
+      }
+      .nav2 .btn_2:hover{
+        background-color: #0eab61;
+        cursor: pointer;
+      }
+      .nav3{
+        background-color: #262424;
+        padding: 10px;
+      }
+      .nav3 ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        justify-content: space-around; /*it change the content from left to right*/
+        align-items: center; /*it change the the contence from top to bottom*/
+      }
+      .nav3 a{
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        display: block;
+        background-color: #b1d123;
+        color: black;
+        border: 2px solid #000000;
+      }
+      .nav3 .dropdown-content{
+        display: none;
+      }
+      .nav3 .dropdown:hover .dropdown-content{
+        display: block;
+        position: absolute;
+        background-color: #241d1d;
+        min-width: 150px;
+      }
+      .nav3 .btn_3{
+        border: none;
+        background-color: #d9f813;
+        padding: 5px 15px;
+        border-radius: 5px;
+      }
+      .nav3 .btn_3:hover{
+        background-color: orange;
+        cursor: pointer;
+        padding: 8px 20px;
+         font-weight: bold;
+      }
+      .nav3 a:hover {
+        background-color: orangered;
+      }
+      .nav3 .dropdown-content a:hover{
+        background-color: orange;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h1>Variation 1: Horizontal with underline effect</h1>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="btn_1">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-container">
+      <h1>Variation 2: Vertical with hover effect</h1>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <button class="btn_2">Login</button>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h1>Variation 3: Horizontal with dropdown</h1>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+            <li><a href="#">Products</a></li>
+          <li><button class="btn_3">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

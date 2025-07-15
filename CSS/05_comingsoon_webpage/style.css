@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
+.img {
+  width: 200px;
+  object-fit: contain;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 200;
+  cursor: url("../images/ketchup.jpg"), auto;
+}
+.container {
+  height: 100vh;
+  background: linear-gradient(to right, #c02425, #f0cb35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #333;
+}
+p{
+  color: #666;
+}
+.content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.btn {
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(to right, #243b55, #141e30);
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.1);
+  color: white;
+}

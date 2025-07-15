@@ -1,0 +1,49 @@
+body{
+    background-color: #c3c3c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.card{
+    background-color: #292525;
+    border-radius: 15px;
+    padding: 40px;
+    width: 300px;
+}
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+p{
+    color: aliceblue;
+}
+a{
+    color: #fff;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+input{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #44bff4;
+}
+a:hover{
+    color: #f6ff00;
+}
+::placeholder{
+    padding-left: 10px;
+}
