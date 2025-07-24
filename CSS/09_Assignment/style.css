@@ -1,0 +1,132 @@
+html,
+body {
+  width: 100%;
+  background: linear-gradient(to right, #23074d, #cc5333);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.carousal-container {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin-right: 0;
+  margin-left: 0;
+  max-width: none;
+}
+.w-100 {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+}
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.box {
+  width: 100%;
+  max-width: 385px;
+  margin-top: 40px;
+  padding-left: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+iframe {
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.btn {
+  display: block;
+  font-weight: bolder;
+  width: 116px;
+  padding: 8px 15px;
+  margin-bottom: 50px;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 5px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1px 9px;
+  background-color: black;
+}
+
+header ul {
+  display: flex;
+  gap: 30px; /* space between <li> items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 22px;
+}
+header ul li a:hover {
+  color: black;
+  background-color: #fff;
+}
+
+#img-container {
+  flex-shrink: 0;
+  padding-right: 45px;
+}
+
+.dp-img {
+  display: inline;
+  width: 128px;
+  height: 122px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+  }
+  .box-container {
+    padding-top: 18px;
+    padding-right: 29px;
+  }
+  header ul li a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  #img-container {
+    /* very imp for center img */
+    padding: 0;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    margin: auto;
+  }
+  header ul li a {
+    padding: 8px 27px;
+    font-size: 14px;
+  }
+}
