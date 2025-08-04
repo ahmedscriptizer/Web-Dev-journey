@@ -211,6 +211,11 @@ footer > a {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.card-box img:hover {
+  transform: scale(1.08);
+  transition: transform 0.5s ease;
+  z-index: 3;
+}
 .card-number {
   position: absolute;
   bottom: 15px;
@@ -303,13 +308,13 @@ p {
     gap: 17px;
   }
   .post {
-  height: 45vh;
+    height: 45vh;
+  }
 }
-}
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .btn-red {
-  padding: 10px 24px;
-  font-size: 19px;
-  font-weight: bold;
-}
+    padding: 10px 24px;
+    font-size: 19px;
+    font-weight: bold;
+  }
 }
