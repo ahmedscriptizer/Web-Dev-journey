@@ -139,10 +139,11 @@ h2 {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 20px;
+  padding: 5px 0;
 }
 
 .faqbox svg {
-  filter: invert(1);
+  filter: invert(1); /*for changing color of plus icon*/
 }
 
 .faqbox {
@@ -187,4 +188,128 @@ footer > a {
   display: flex;
   flex-direction: column;
   gap: 23px;
+}
+.card-container {
+  padding: 20px 20px;
+}
+.card-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card-box {
+  position: relative;
+  width: 200px;
+  height: auto;
+  display: inline-block;
+}
+.card-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.card-number {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  font-size: 100px;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 2px white; /* White outer border */
+  line-height: 1;
+  z-index: 2;
+  font-family: Arial, sans-serif;
+}
+.poster-container {
+  color: white;
+  max-width: 70vw;
+  margin: auto;
+  padding: 10px 34px;
+}
+.posters {
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+}
+.post {
+  border-radius: 10px;
+  background: linear-gradient(135deg, #192144, #210f19);
+  /* border: 2px solid pink; */
+  height: 50vh;
+  width: 20vw;
+  padding: 15px;
+  position: relative;
+}
+.post img {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+}
+.h3 {
+  font-weight: bolder;
+  font-size: 35px;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b3b3bd;
+}
+.bottom-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 76px auto 4px auto;
+}
+.bottom-msg {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 17px;
+}
+.hero-buttons input {
+  padding: 15px 104px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  position: relative;
+}
+.hero-buttons input::placeholder {
+  position: absolute;
+  left: 20px;
+  opacity: 1;
+  color: rgb(184, 184, 184);
+}
+
+@media (max-width: 652px) {
+  .hero > :nth-child(1) {
+    font-weight: 900;
+    font-size: 34px;
+    text-align: center;
+  }
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 17px;
+  }
+  .post {
+  height: 45vh;
+}
+}
+@media (max-width: 768px){
+  .btn-red {
+  padding: 10px 24px;
+  font-size: 19px;
+  font-weight: bold;
+}
 }
