@@ -32,7 +32,7 @@ function processTeaOrder(teaFunction){
   return teaFunction("earl tea");
 }
 
-// let result = processTeaOrder(makeTea);
+let result = processTeaOrder(makeTea);
 // console.log(result);
 
 // 5# 
@@ -44,9 +44,7 @@ function createTeaMaker(){
 }
 
 let teaMaker = createTeaMaker()
-let result = teaMaker("coffee")
+let result1 = teaMaker("coffee")
 // console.log(teaMaker("Coffe"));
-console.log(result);
-
-
+console.log(result1);
 
