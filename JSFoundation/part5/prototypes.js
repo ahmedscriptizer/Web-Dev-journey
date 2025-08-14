@@ -16,7 +16,7 @@ let Tomhardware = {};
 let genericCar = { tyre: 4 };
 
 let tesla = { Driver: "AI" };
-// Another and best method to give property of another object to your target object is following
+// Another method to give property of another object to your target object is following
 Object.setPrototypeOf(tesla, genericCar);
 
 console.log(`tesla`, Object.getPrototypeOf(tesla));
