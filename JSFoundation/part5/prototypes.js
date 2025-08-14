@@ -1,17 +1,19 @@
 let computer = { CPU: 12 };
+
 let lenovo = {
   screen: "HD",
   __proto__: computer,
 };
+
 let Tomhardware = {};
-// if you want to access any prototype of object or anything use .__proto__
+// if you want to access any prototype of object or anything = use .__proto__
 //(__) -> is called dunder
 
 // console.log(`computer`, computer.__proto__);
 
 // this proto will show in browser not in terminal just like prompt
 
-// console.log(`Lenovo`, lenovo.__proto__);
+console.log(`Lenovo`, lenovo.screen, lenovo.__proto__);
 
 let genericCar = { tyre: 4 };
 
