@@ -19,5 +19,15 @@ Animal.prototype.sound = function(){
 } // we cannot use arrow func bcz it doesnot have its own "this"
 
 let cow = new Animal("cow");
-console.log(cow.sound());
+// console.log(cow.sound());
 
+//error
+
+function Drink(name){
+    if(!new.target){
+        throw new Error("Drink must be called with new keyword");
+    }
+    this.name = name;
+}
+
+let sprite = Drink("Sprite");
