@@ -11,7 +11,7 @@ let Tomhardware = {};
 
 // console.log(`computer`, computer.__proto__);
 
-// this proto will show in browser not in terminal just like prompt
+// this prototype will show in browser not in terminal just like prompt
 
 console.log(`Lenovo`, lenovo.screen, lenovo.__proto__);
 
