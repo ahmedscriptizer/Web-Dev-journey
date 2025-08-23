@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code</title>
+  </head>
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    const vari = document.createElement("div");
+    console.log(vari);
+    vari.className = "myclsas";
+    vari.id = Math.round(Math.random() * 10 + 1);
+    vari.setAttribute("title", "generated title");
+    vari.style.backgroundColor = "green";
+    vari.style.padding = "12px";
+    vari.style.borderRadius = "12px";
+
+    // Preffered method to set bcz ye override nhi kerta
+    const addtext = document.createTextNode("Hello this is ahmed");
+    vari.appendChild(addtext);
+    document.body.appendChild(vari);
+    // other method which is not usually preferred bcz it overrides
+    vari.innerText = "Ahmed is great";
+  </script>
+</html>
