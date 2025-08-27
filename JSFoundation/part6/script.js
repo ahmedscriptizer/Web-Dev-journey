@@ -42,6 +42,7 @@ function additem(item) {
   li.appendChild(document.createTextNode(`${item}`));
   document.querySelector("#shopping-list").appendChild(li);
 
+  // we can also do by this
   /* li.innerText = `${item}`;
   document.getElementById("shopping-list").appendChild(li); */
 }
@@ -61,4 +62,56 @@ document
   .getElementById("remove-task-btn")
   .addEventListener("click", function () {
     removeItem(0);
+  });
+
+// example # 6
+document.getElementById("click-me-btn").addEventListener("click", function () {
+  alert("Hi Ahmed ");
+});
+
+// Example # 7
+document.getElementById("tea-list").addEventListener("click", function (event) {
+  if (event.target && event.target.matches(".teaItem")) {
+    alert("clicked on " + event.target.textContent);
+  }
+});
+
+// Example # 8  ** form handling vvv.IMP EXERCISE
+
+document
+  .getElementById("feedackForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    let feed = document.getElementById("feedback").value;
+    document.getElementById("feedbackDisplay").textContent = `${feed}`;
+  });
+
+// Example # 9
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("domStatus").textContent = "DOM fully Loaded";
+});
+
+// Example # 10
+
+/* document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    let text = document.getElementById("descriptionText");
+    if (text.style.backgroundColor === "yellow") {
+      text.style.backgroundColor = "";
+      text.style.color = "";
+    } else {
+      text.style.backgroundColor = "yellow";
+      text.style.color = "black";
+    }
+  });
+ */
+
+// Example # 10.2     DONE e.g-10 by using classList
+
+document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    let text = document.getElementById("descriptionText");
+    text.classList.toggle("highlight");
   });

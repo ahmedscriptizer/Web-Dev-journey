@@ -20,6 +20,10 @@
         list-style: none;
         padding: 0;
       }
+      .highlight{
+        background-color: yellow;
+        color: black;
+      }
     </style>
   </head>
   <body>
@@ -84,9 +88,9 @@
     <section id="event-delegation">
       <h2>Event Delegation</h2>
       <ul id="tea-list">
-        <li>Green Tea</li>
-        <li>Black Tea</li>
-        <li>Oolong Tea</li>
+        <li class="teaItem">Green Tea</li>
+        <li class="teaItem">Black Tea</li>
+        <li class="teaItem">Oolong Tea</li>
       </ul>
       <p>Click on any tea to select it!</p>
     </section>
@@ -94,15 +98,27 @@
     <!-- Form Handling -->
     <section id="form-handling">
       <h2>Form Handling</h2>
-      <label for="feedback">Your Feedback:</label>
-      <input type="text" id="feedback" placeholder="Enter feedback" />
-      <button id="submit-feedback-btn">Submit Feedback</button>
+      <form id="feedackForm">
+        <label for="feedback">Your Feedback:</label>
+        <input type="text" id="feedback" placeholder="Enter feedback" />
+        <button id="submit-feedback-btn">Submit Feedback</button>
+      </form>
+      <p id="feedbackDisplay"></p>
     </section>
 
     <!-- DOM Content Loaded -->
-    <footer>
+    <section id="example-9">
       <h2>DOM Content Loaded</h2>
-    </footer>
+      <p id="domStatus">Waiting for DOM to load....</p>
+    </section>
+
+    <!-- DOM CSS Manipulation -->
+
+    <section id="example-10">
+      <h2>CSS Class Manipulation</h2>
+      <p id="descriptionText">This text will change color!</p>
+      <button id="toggleHighlight">Toggle Highlight</button>
+    </section>
     <script src="./script.js"></script>
   </body>
 </html>
