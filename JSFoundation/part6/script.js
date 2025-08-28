@@ -115,3 +115,9 @@ document
     let text = document.getElementById("descriptionText");
     text.classList.toggle("highlight");
   });
+
+// Assignment from sir hitesh to target lable
+document.getElementById("feedackForm").addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log(document.querySelector('label[for="feedback"]'));
+});

@@ -16,11 +16,12 @@
     vari.style.padding = "12px";
     vari.style.borderRadius = "12px";
 
+    // method which is not usually preferred bcz it overrides
+    vari.innerText = "Ahmed is great";
+
     // Preferred method to set text because it doesn’t override existing content
     const addtext = document.createTextNode("Hello this is ahmed");
     vari.appendChild(addtext);
     document.body.appendChild(vari);
-    // other method which is not usually preferred bcz it overrides
-    vari.innerText = "Ahmed is great";
   </script>
 </html>
