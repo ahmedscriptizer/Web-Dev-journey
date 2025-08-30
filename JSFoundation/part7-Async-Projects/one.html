@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+  </head>
+  <body style="background-color: #2b2b2b; color: white">
+    <section>
+      <h1 id="heading">Welcome to Page</h1>
+      <button id="btn">Stop</button>
+    </section>
+  </body>
+  <script>
+    let pass = function () {
+      document.getElementById("heading").innerText =
+        "Ahmed will purchase s-26 ultra next year";
+    };
+    let timer = setTimeout(pass, 2000);
+
+    let print = setTimeout(() => {
+      console.log("tried Timeout function");
+    }, 2000);
+
+    document.getElementById("btn").addEventListener("click", function () {
+      clearTimeout(timer);
+      console.log("timeout Cleared");
+    });
+  </script>
+</html>

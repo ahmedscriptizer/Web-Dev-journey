@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>colorChange||project</title>
+  </head>
+  <body>
+    <h1>Start Everything with the name of Allah</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // Write a function which gives rand color
+    // write a function which start interval with rand color
+
+    function randomColor() {
+      const hex = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    let ref;
+    function startChanging() {
+      if (!ref) {
+        ref = setInterval(ChangeBG, 1000);
+      }
+      function ChangeBG() {
+        document.body.style.backgroundColor = randomColor();
+      }
+    }
+
+    function stopChanging() {
+      clearInterval(ref);
+      ref = null;
+    }
+    document.getElementById("start").addEventListener("click", startChanging);
+    document.getElementById("stop").addEventListener("click", stopChanging);
+  </script>
+</html>

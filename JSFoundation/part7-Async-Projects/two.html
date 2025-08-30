@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+  </head>
+  <body style="background-color: #2b2b2b; color: white">
+    <section>
+      <h1 id="heading">Chai aur javascript</h1>
+      <input type="text" id="input" placeholder="Enter Name!" />
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </section>
+  </body>
+  <script>
+    let rep;
+    function StartInterval() {
+      let nam = document.getElementById("input").value;
+      rep = setInterval(() => {
+        if (!nam) {
+          nam = "guest";
+        }
+        console.log(nam, Date.now());
+      }, 1000);
+    }
+
+    function StopInterval() {
+      clearInterval(rep);
+      console.log("stopped");
+
+      rep = null;
+    }
+    document.getElementById("start").addEventListener("click", StartInterval);
+    document.getElementById("stop").addEventListener("click", StopInterval);
+  </script>
+</html>

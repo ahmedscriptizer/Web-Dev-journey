@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+  </head>
+  <body style="background-color: #2b2b2b; color: white">
+    <section id="main">
+      <h1 id="heading">Welcome to Page</h1>
+    </section>
+    <section>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </section>
+  </body>
+  <script>
+    let timer;
+    function writeText() {
+      timer = setTimeout(() => {
+        let para = document.createElement("p");
+        para.innerText = "Ahmed will buy Samsung S26";
+        document.getElementById("main").appendChild(para);
+      }, 2000);
+    }
+
+    document.getElementById("start").addEventListener("click", writeText);
+    document.getElementById("stop").addEventListener("click", function () {
+      clearTimeout(timer);
+      console.log("timeout Cleared");
+    });
+  </script>
+</html>
