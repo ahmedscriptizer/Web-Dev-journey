@@ -23,3 +23,34 @@ fetchData()
   .catch((error) => {
     console.log(error);
   });
+
+//   ===================================================================
+const PromiseOne = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    let success = true;
+    if (success) {
+      resolve("Succesful attempt");
+    } else {
+      reject("Attempt Failed");
+    }
+  }, 2000);
+});
+
+PromiseOne.then(function (data) {
+  console.log(data);
+}).catch(function (error) {
+  console.log(error);
+});
+
+// ========================================================================
+//  Using Promise through Async Await
+
+async function consumedPromiseOne() {
+  try {
+    let response = await PromiseOne;
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+consumedPromiseOne();
