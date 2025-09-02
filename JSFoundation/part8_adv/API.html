@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing API</title>
+  </head>
+  <body>
+    <h1>Using AJAX method</h1>
+    <p>old method to use API</p>
+    <img alt="dog img from api " id="dogimg" />
+  </body>
+  <script>
+    let ResponseURL = "https://dog.ceo/api/breeds/image/random";
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", ResponseURL);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        let data = JSON.parse(this.responseText);
+        let imgg = document.getElementById("dogimg");
+        imgg.src = data.message;
+        imgg.width = 300;
+        imgg.height = 200;
+        let img2 = document.createElement("img");
+        img2.src = data.message;
+        img2.width = 300;
+        img2.height = 200;
+        document.body.appendChild(img2)
+      }
+    };
+    xhr.send();
+  </script>
+</html>
