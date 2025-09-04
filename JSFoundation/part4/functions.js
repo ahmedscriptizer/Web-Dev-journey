@@ -1,3 +1,17 @@
+// passing object in function 
+
+const user = {
+  username: "Ahmed Ameer",
+  price: 23000
+}
+
+function ConsumeObject(obj){
+  return `Username is ${obj.username} and price is ${obj.price}`
+}
+
+console.log(ConsumeObject(user));
+
+
 // 1#
 function makeTea(typeofTea) {
   return `Making ${typeofTea}`;
