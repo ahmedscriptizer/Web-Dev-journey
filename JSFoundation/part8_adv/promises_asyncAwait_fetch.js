@@ -80,3 +80,40 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .catch((error) => {
     console.log(error);
   });
+
+//  =======================================================================
+//                  Syntax for calling more than one promise
+
+function fetchPostData() {
+  return new Promise((resolve) => {
+    setInterval(() => {
+      resolve("Post fetched");
+    }, 2000);
+  });
+}
+
+function fetchCommentData() {
+  return new Promise((resolve) => {
+    setInterval(() => {
+      resolve("Comment fetched");
+    }, 2000);
+  });
+}
+
+async function Execute() {
+  try {
+    // const postData = await fetchPostData();
+    // const CommentData = await fetchCommentData();
+
+    const [postData, CommentData] = await Promise.all([
+      fetchPostData(),
+      fetchCommentData(),
+    ]);
+
+    console.log(postData);
+    console.log(CommentData);
+  } catch (error) {
+    console.log("Error", error);
+  }
+}
+Execute();
