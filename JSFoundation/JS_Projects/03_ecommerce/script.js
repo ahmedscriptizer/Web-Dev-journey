@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   productList.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
-      const productId = parseInt(e.target.getAttribute("data-id"));
+      const productId = parseInt(e.target.getAttribute("data-id")); // HTML store attributes as string by default
       const product = products.find((p) => p.id === productId);
       addToCart(product);
     }
