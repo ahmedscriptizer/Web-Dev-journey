@@ -1,4 +1,8 @@
 // ===== Nullish Coalescing Operator (??) : null undefined ====
+// Simple meaning:
+
+// Agar left side null ya undefined ho, to right side use karo
+// Warna left side hi rakho
 let val1;
 // val1 = 5 ?? 10;
 
