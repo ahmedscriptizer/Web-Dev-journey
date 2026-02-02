@@ -20,7 +20,7 @@ console.log(val1);
 // console.log(val1());
 
 // ========== Ternary operator ===================
-//  syntax : condition ? true : false
+//  syntax : condition ? truePart : falsePart
 
 let IceCream = 100;
 IceCream <= 80 ? console.log("less than 80") : console.log("More then 80");
